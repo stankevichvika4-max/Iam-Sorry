@@ -1,7 +1,7 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --text-color: #333;
+  --text-color: #fff;
 
   --header-height: 124px;
   --width-btn: 340px;
@@ -23,12 +23,13 @@ html {
 
 html::-webkit-scrollbar {
   width: 2px;
-  background-color: #ccc;
+  background-color: #cc;
 }
 
 body {
   height: 100%;
   cursor: url(https://cur.cursors-4u.net/symbols/sym-1/sym49.cur), auto !important;
+  background-color: #660000;
 }
 
 canvas {
@@ -43,7 +44,6 @@ canvas {
   overflow: hidden;
   flex-direction: column;
   flex: 1;
-  background-image: linear-gradient(to right top, #5998C5, #419D78);
   animation: changeColor 4s ease-in-out;
   -webkit-animation: changeColor 4s ease-in-out;
   -moz-animation: changeColor 4s ease-in-out;
