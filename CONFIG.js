@@ -1,10 +1,35 @@
 const CONFIGDATA = {
-  titleHeader: "Chào cậu, tớ có điều muốn nói. </br> Cậu Hết Dỗi Chưa Á!",
+  titleHeader: " Привет, Янинский:3",
   descriptionHeader:
-    "Hãy trả lời một cách thật lòng nhé. Nếu cậu im lặng và rời đi thì tức là cậu đã Hết Dỗi.",
-  buttonYes: "Đã Hết Rồi",
-  buttonNo: "Chưa Còn Lâu",
-  titleModar: " Ok cậu.",
+    "Я поступила не красиво, прости.</br> Мы можем встретиться вдвоём и всё обсудить?.",
+  buttonYes: "да🥹",
+  buttonNo: "нет🥺",
+  titleModar: " :3.",
   descriptionModar:
-    "Cảm ơn cậu đã Hết Dỗi Nhé. </br> Tớ Không Trêu Thế Nữa. </br> Chúc Cậu Sáng Làm Việc Vui Vẻ Nha.</br> haha <3",
+    "спасибо, что позволишь объясниться. </br> <3",
 };
+
+// --- Код для убегающей кнопки ---
+document.addEventListener('DOMContentLoaded', function() {
+  const noBtn = document.getElementById('buttonNo');
+  
+  if (noBtn) {
+    const moveBtn = function() {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.position = 'fixed';
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    };
+    
+    noBtn.addEventListener('mouseenter', moveBtn);
+    noBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      moveBtn();
+    });
+    noBtn.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      moveBtn();
+    });
+  }
+});
